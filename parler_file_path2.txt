@@ -1,0 +1,4 @@
+{
+	"input_path": "D:/parler_text/parler_2020-01-06_posts-partial",
+	"output_path":"D:/parler_text_output/parler_text.csv"
+} 
