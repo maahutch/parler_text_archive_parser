@@ -1,0 +1,4 @@
+{
+	"input_path": "location of parler html files",
+	"output_path":"location to write the csv file"
+} 
