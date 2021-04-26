@@ -22,18 +22,25 @@ def main():
     all_pages = []
     count = 0
     
-    for i in range(50000,len(summaries)): 
-        if count <= 10: 
-             
+    numberToSkip = 45000
+    
+    for i in range(numberToSkip,len(summaries)): 
+        if count <= len(summaries):
+            
              one_page = parse_parler_html(file = summaries[i])
           
+             count+=1
+             
+             progress = ((count/(len(summaries)-numberToSkip))*100)
+            
              if one_page == 1:
-                 print(summaries[i], 'has No Data -', '%f percent Done' % (count/len(summaries)))
+                 print(summaries[i], 'has No Data -', '%f percent Done' % progress)
+                
              else:
-                 print(summaries[i], 'HAS DATA! - ', '%f percent Done' %  (count/len(summaries)) )
+                 print(summaries[i], 'HAS DATA! - ', '%f percent Done' %  progress)
                  one_page['file_name'] = summaries[i]
                  all_pages.append(one_page)
-                 count+=1
+             
         else: 
             break 
     

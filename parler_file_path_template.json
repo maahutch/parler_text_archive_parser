@@ -1,0 +1,4 @@
+{
+	"input_path": "<Path to your copy of the html archive>/parler_2020-01-06_posts-partial",
+	"output_path":"<Your output path>/parler_text.csv"
+} 
