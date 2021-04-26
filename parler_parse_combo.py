@@ -7,10 +7,6 @@ Created on Fri Mar 26 12:56:52 2021
 import csv
 import os
 import json
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-from parse_parler_estimated_date_fun import calc_estimated_time
-from parse_parler_extract_video_id import url_split
 from parse_parler_html_fun import parse_parler_html
 
 
@@ -26,15 +22,15 @@ def main():
     all_pages = []
     count = 0
     
-    for i in range(0,len(summaries)): 
-        if count <= len(summaries): 
+    for i in range(50000,len(summaries)): 
+        if count <= 10: 
              
              one_page = parse_parler_html(file = summaries[i])
           
              if one_page == 1:
-                 print(summaries[i], 'has No Data')
+                 print(summaries[i], 'has No Data -', '%f percent Done' % (count/len(summaries)))
              else:
-                 print(summaries[i], 'HAS DATA!')
+                 print(summaries[i], 'HAS DATA! - ', '%f percent Done' %  (count/len(summaries)) )
                  one_page['file_name'] = summaries[i]
                  all_pages.append(one_page)
                  count+=1

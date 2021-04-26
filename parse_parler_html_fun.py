@@ -5,7 +5,8 @@ Created on Fri Mar 26 12:59:09 2021
 @author: maahutch
 """
 from bs4 import BeautifulSoup
-
+from parse_parler_estimated_date_fun import calc_estimated_time
+from parse_parler_extract_video_id import url_split
 
 def parse_parler_html(file):
     

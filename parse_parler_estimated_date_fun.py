@@ -5,8 +5,8 @@ Created on Wed Apr 14 13:11:16 2021
 @author: maahutch
 """
 
-#from datetime import datetime
-#from dateutil.relativedelta import relativedelta
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 
 def calc_estimated_time(timeFromHtml):
