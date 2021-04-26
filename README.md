@@ -5,7 +5,7 @@ Converts the partial parler text archive html files to a csv suitable for loadin
 
 1. Clone the repository
 2. Inside the repository directory run `pip install -r requirements.txt` to install dependencies
-3. Set files paths in `parler_file_path.txt`
+3. Set files paths in `parler_file_path_template.json`. Rename this file to `parler_file_path.txt`.
 4. Run `python parler_parse_combo.py`
 
 
