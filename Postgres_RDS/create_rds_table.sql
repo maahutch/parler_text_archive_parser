@@ -1,4 +1,5 @@
 CREATE TABLE html_data (
+		id SERIAL PRIMARY KEY, 
 		title varchar, 
 		echoed varchar, 
 		createdDateTime varchar, 
